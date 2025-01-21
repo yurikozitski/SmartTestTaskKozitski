@@ -31,7 +31,8 @@ namespace SmartTestTaskKozitski.DAL.Repositories
 
         public async Task<ProcessEquipmentType> GetByCodeAsync(long code)
         {
-            return await this.context.ProcessEquipmentTypes.FirstAsync(x => x.Specifications.Code == code);
+            return await this.context.ProcessEquipmentTypes
+                .FirstAsync(x => x.Specifications.Code == code);
         }
     }
 }

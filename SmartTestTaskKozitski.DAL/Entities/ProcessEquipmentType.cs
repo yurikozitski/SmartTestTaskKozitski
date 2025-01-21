@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.DAL.Entities
 {
-    public class ProcessEquipmentType : BaseEntity
+    public class ProcessEquipmentType
     {
         public Specifications Specifications { get; set; } = null!;
     }

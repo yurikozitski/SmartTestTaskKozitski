@@ -24,27 +24,25 @@ namespace SmartTestTaskKozitski.DAL.Data
         {
             modelBuilder.Entity<ProcessEquipmentType>(pe =>
             {
-                pe.HasKey(p => p.Id);
+                pe.HasKey(p => p.Specifications.Code);
 
                 pe.OwnsOne(p => p.Specifications, s =>
                 {
                     s.Property(sp => sp.Code).HasColumnName("Code");
                     s.Property(sp => sp.Name).HasColumnName("Name");
                     s.Property(sp => sp.Area).HasColumnName("Area");
-                    s.HasIndex(sp => sp.Code).IsUnique();
                 });
             });
 
             modelBuilder.Entity<ProductionFacility>(pf =>
             {
-                pf.HasKey(p => p.Id);
+                pf.HasKey(p => p.Specifications.Code);
 
                 pf.OwnsOne(p => p.Specifications, s =>
                 {
                     s.Property(sp => sp.Code).HasColumnName("Code");
                     s.Property(sp => sp.Name).HasColumnName("Name");
                     s.Property(sp => sp.Area).HasColumnName("Area");
-                    s.HasIndex(sp => sp.Code).IsUnique();
                 });
             });
 
@@ -54,13 +52,12 @@ namespace SmartTestTaskKozitski.DAL.Data
 
                 c.HasOne(c => c.ProductionFacility)
                     .WithOne()
-                    .HasForeignKey<Contract>(c => c.ProductionFacilityId);
+                    .HasForeignKey<Contract>(c => c.ProductionFacilityCode);
 
                 c.HasOne(c => c.ProcessEquipmentType)
                     .WithOne()
-                    .HasForeignKey<Contract>(c => c.ProcessEquipmentTypeId);
+                    .HasForeignKey<Contract>(c => c.ProcessEquipmentTypeCode);
             });
         }
-
     }
 }

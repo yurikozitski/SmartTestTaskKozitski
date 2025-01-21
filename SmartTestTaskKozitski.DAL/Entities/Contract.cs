@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.DAL.Entities
 {
-    public class Contract : BaseEntity
+    public class Contract
     {
-        public Guid ProductionFacilityId { get; set; }
+        public Guid Id { get; set; }
+
+        public long ProductionFacilityCode { get; set; }
 
         public ProductionFacility ProductionFacility { get; set; } = null!;
 
-        public Guid ProcessEquipmentTypeId { get; set; }
+        public long ProcessEquipmentTypeCode { get; set; }
 
         public ProcessEquipmentType ProcessEquipmentType { get; set; } = null!;
 

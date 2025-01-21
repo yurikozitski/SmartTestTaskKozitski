@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.DAL.Interfaces
 {
-    public interface IRepository<TEntity> where TEntity : BaseEntity
+    public interface IRepository<TEntity> where TEntity : class
     {
         Task<IEnumerable<TEntity>> GetAllAsync(int take = 100, int skip = 0);
 

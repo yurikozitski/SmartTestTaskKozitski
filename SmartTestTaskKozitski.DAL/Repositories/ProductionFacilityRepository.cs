@@ -34,7 +34,8 @@ namespace SmartTestTaskKozitski.DAL.Repositories
 
         public async Task<ProductionFacility> GetByCodeAsync(long code)
         {
-            return await this.context.ProductionFacilities.FirstAsync(x => x.Specifications.Code == code);
+            return await this.context.ProductionFacilities
+                .FirstAsync(x => x.Specifications.Code == code);
         }
     }
 }

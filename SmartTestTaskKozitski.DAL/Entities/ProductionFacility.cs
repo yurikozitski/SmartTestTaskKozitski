@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.DAL.Entities
 {
-    public class ProductionFacility : BaseEntity
+    public class ProductionFacility
     {
         public Specifications Specifications { get; set; } = null!;
     }

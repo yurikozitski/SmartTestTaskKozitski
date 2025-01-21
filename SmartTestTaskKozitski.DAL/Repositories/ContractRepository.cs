@@ -21,15 +21,6 @@ namespace SmartTestTaskKozitski.DAL.Repositories
 
         public async Task AddAsync(Contract entity)
         {
-            var facility = await this.context.ProductionFacilities
-                .FirstAsync(x => x.Specifications.Code == entity.ProductionFacility.Specifications.Code);
-
-            var equipment = await this.context.ProcessEquipmentTypes
-                .FirstAsync(x => x.Specifications.Code == entity.ProcessEquipmentType.Specifications.Code);
-
-            entity.ProductionFacility = facility;
-            entity.ProcessEquipmentType = equipment;
-
             await this.context.Contracts.AddAsync(entity);
             await this.context.SaveChangesAsync();
         }
