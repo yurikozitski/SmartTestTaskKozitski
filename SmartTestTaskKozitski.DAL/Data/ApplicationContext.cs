@@ -75,11 +75,11 @@ namespace SmartTestTaskKozitski.DAL.Data
                     s.HasIndex(sp => sp.Code).IsUnique();
 
                     s.HasData(
-                        new { ProductionFacilityId = FacilityAId, Code = 2001L, Name = "FacilityA", Area = 200 },
-                        new { ProductionFacilityId = FacilityBId, Code = 2002L, Name = "FacilityB", Area = 300 },
-                        new { ProductionFacilityId = FacilityCId, Code = 2003L, Name = "FacilityC", Area = 400 },
-                        new { ProductionFacilityId = FacilityDId, Code = 2004L, Name = "FacilityD", Area = 500 },
-                        new { ProductionFacilityId = FacilityEId, Code = 2005L, Name = "FacilityE", Area = 600 }
+                        new { ProductionFacilityId = FacilityAId, Code = 2001L, Name = "FacilityA", Area = 2000 },
+                        new { ProductionFacilityId = FacilityBId, Code = 2002L, Name = "FacilityB", Area = 3000 },
+                        new { ProductionFacilityId = FacilityCId, Code = 2003L, Name = "FacilityC", Area = 4000 },
+                        new { ProductionFacilityId = FacilityDId, Code = 2004L, Name = "FacilityD", Area = 5000 },
+                        new { ProductionFacilityId = FacilityEId, Code = 2005L, Name = "FacilityE", Area = 6000 }
                     );
                 });
 
@@ -107,11 +107,11 @@ namespace SmartTestTaskKozitski.DAL.Data
                     .OnDelete(DeleteBehavior.Restrict);
 
                 c.HasData(
-                    new { Id = new Guid("1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"), ProductionFacilityId = FacilityAId, ProcessEquipmentTypeId = TypeAId, Quantity = 10 },
-                    new { Id = new Guid("2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"), ProductionFacilityId = FacilityBId, ProcessEquipmentTypeId = TypeBId, Quantity = 20 },
-                    new { Id = new Guid("3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d"), ProductionFacilityId = FacilityCId, ProcessEquipmentTypeId = TypeCId, Quantity = 30 },
-                    new { Id = new Guid("4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d"), ProductionFacilityId = FacilityDId, ProcessEquipmentTypeId = TypeDId, Quantity = 40 },
-                    new { Id = new Guid("5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"), ProductionFacilityId = FacilityEId, ProcessEquipmentTypeId = TypeEId, Quantity = 50 }
+                    new { Id = new Guid("1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"), ProductionFacilityId = FacilityAId, ProcessEquipmentTypeId = TypeAId, Quantity = 2 },
+                    new { Id = new Guid("2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"), ProductionFacilityId = FacilityBId, ProcessEquipmentTypeId = TypeBId, Quantity = 2 },
+                    new { Id = new Guid("3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d"), ProductionFacilityId = FacilityCId, ProcessEquipmentTypeId = TypeCId, Quantity = 3 },
+                    new { Id = new Guid("4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d"), ProductionFacilityId = FacilityDId, ProcessEquipmentTypeId = TypeDId, Quantity = 1 },
+                    new { Id = new Guid("5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"), ProductionFacilityId = FacilityEId, ProcessEquipmentTypeId = TypeEId, Quantity = 3 }
                 );
             });
         }

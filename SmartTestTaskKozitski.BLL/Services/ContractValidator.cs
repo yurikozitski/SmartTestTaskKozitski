@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SmartTestTaskKozitski.DAL.Interfaces;
+using SmartTestTaskKozitski.BLL.Exceptions;
 
 namespace SmartTestTaskKozitski.BLL.Services
 {
@@ -27,15 +28,28 @@ namespace SmartTestTaskKozitski.BLL.Services
 
         public async Task<bool> IsValid(Contract contract)
         {
-            var facility = await this.facilityRepository.GetByCodeAsync(contract.ProductionFacility.Specifications.Code);
-            int facilityArea = facility.Specifications.Area;
+            ProductionFacility? facility = default;
+            IEnumerable<Contract>? facilityContracts = default;
+            ProcessEquipmentType? equipmentType = default;
 
-            var facilityContracts = await this.contractRepository.GetByFacilityCodeAsync(contract.ProductionFacility.Specifications.Code);
-            int usedFacilityArea = facilityContracts.Sum(x => x.Quantity * x.ProcessEquipmentType.Specifications.Area);
+            long contractFacilityCode = contract.ProductionFacility.Specifications.Code;
+            long contractProcessEquipmentTypeCode = contract.ProcessEquipmentType.Specifications.Code;
 
-            var equipmentType = await this.processEquipmentTypeRepository.GetByCodeAsync(contract.ProcessEquipmentType.Specifications.Code);
-            int contractArea = contract.Quantity * equipmentType.Specifications.Area;
+            try
+            {
+                facility = await this.facilityRepository.GetByCodeAsync(contractFacilityCode);
+                facilityContracts = await this.contractRepository.GetByFacilityCodeAsync(contractFacilityCode);
+                equipmentType = await this.processEquipmentTypeRepository.GetByCodeAsync(contractProcessEquipmentTypeCode);
+            }
+            catch (InvalidOperationException)
+            {
+                throw new InvalidCodeException(contractFacilityCode, contractProcessEquipmentTypeCode);
+            }
 
+            int facilityArea = facility!.Specifications.Area;
+            int usedFacilityArea = facilityContracts!.Sum(x => x.Quantity * x.ProcessEquipmentType.Specifications.Area);
+
+            int contractArea = contract.Quantity * equipmentType!.Specifications.Area;
             int freeArea = facilityArea - usedFacilityArea;
 
             return contractArea <= freeArea;

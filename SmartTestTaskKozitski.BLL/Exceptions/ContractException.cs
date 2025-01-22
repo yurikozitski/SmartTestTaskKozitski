@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.BLL.Exceptions
 {
-    public class SpaceException : ContractException
+    public class ContractException : Exception
     {
-        public SpaceException(string message) : base(message) { }
+        public ContractException() { }
+
+        public ContractException(string message) : base(message) { }
     }
 }

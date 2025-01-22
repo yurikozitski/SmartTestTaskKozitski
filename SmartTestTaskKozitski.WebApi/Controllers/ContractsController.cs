@@ -7,7 +7,7 @@ using SmartTestTaskKozitski.DAL.Entities;
 
 namespace SmartTestTaskKozitski.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/contracts")]
     [ApiController]
     public class ContractsController : ControllerBase
     {
@@ -35,12 +35,12 @@ namespace SmartTestTaskKozitski.WebApi.Controllers
             {
                 await this.contractService.AddAsync(addContractDto);
             }
-            catch (SpaceException ex)
+            catch (ContractException ex)
             {
                 return BadRequest(ex.Message);
             }
-            
-            return Created();
+
+            return StatusCode(StatusCodes.Status201Created);
         }
     }
 }

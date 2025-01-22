@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartTestTaskKozitski.DAL.Data;
 
@@ -11,9 +12,11 @@ using SmartTestTaskKozitski.DAL.Data;
 namespace SmartTestTaskKozitski.DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20250122101832_NewSeed")]
+    partial class NewSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -274,35 +277,35 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                                 new
                                 {
                                     ProductionFacilityId = new Guid("b0fc118d-527d-41b1-9b1c-3a74bdc8dd2a"),
-                                    Area = 2000,
+                                    Area = 200,
                                     Code = 2001L,
                                     Name = "FacilityA"
                                 },
                                 new
                                 {
                                     ProductionFacilityId = new Guid("241a2aa6-0bf4-442a-9058-9db7c2355f96"),
-                                    Area = 3000,
+                                    Area = 300,
                                     Code = 2002L,
                                     Name = "FacilityB"
                                 },
                                 new
                                 {
                                     ProductionFacilityId = new Guid("3c663d1b-f9f9-47d6-a9ed-e3ab2a9b2895"),
-                                    Area = 4000,
+                                    Area = 400,
                                     Code = 2003L,
                                     Name = "FacilityC"
                                 },
                                 new
                                 {
                                     ProductionFacilityId = new Guid("2342040a-9c7a-4537-9bfc-6b1895cd711f"),
-                                    Area = 5000,
+                                    Area = 500,
                                     Code = 2004L,
                                     Name = "FacilityD"
                                 },
                                 new
                                 {
                                     ProductionFacilityId = new Guid("e3c1a636-05cf-4b7f-8f16-7d4bd7416e67"),
-                                    Area = 6000,
+                                    Area = 600,
                                     Code = 2005L,
                                     Name = "FacilityE"
                                 });
