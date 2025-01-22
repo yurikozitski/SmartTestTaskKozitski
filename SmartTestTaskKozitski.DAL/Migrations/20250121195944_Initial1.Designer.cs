@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartTestTaskKozitski.DAL.Data;
 
@@ -11,9 +12,11 @@ using SmartTestTaskKozitski.DAL.Data;
 namespace SmartTestTaskKozitski.DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20250121195944_Initial1")]
+    partial class Initial1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,35 +51,35 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"),
+                            Id = new Guid("cc2fa426-ac7f-476a-86df-8d1d916a744c"),
                             ProcessEquipmentTypeId = new Guid("d1e59328-7e39-4fe7-9b54-768cebbeb324"),
                             ProductionFacilityId = new Guid("b0fc118d-527d-41b1-9b1c-3a74bdc8dd2a"),
                             Quantity = 10
                         },
                         new
                         {
-                            Id = new Guid("2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"),
+                            Id = new Guid("6b7f2ff8-7b20-497b-90ce-f04def9d1011"),
                             ProcessEquipmentTypeId = new Guid("4cd6e57c-d7ae-42ef-9d6e-74a49dbd4223"),
                             ProductionFacilityId = new Guid("241a2aa6-0bf4-442a-9058-9db7c2355f96"),
                             Quantity = 20
                         },
                         new
                         {
-                            Id = new Guid("3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d"),
+                            Id = new Guid("01d77963-da2d-4dd4-81a2-fd64e0e8fd8e"),
                             ProcessEquipmentTypeId = new Guid("7e02cfa1-5ec5-4507-8c68-d471cbf6e9c5"),
                             ProductionFacilityId = new Guid("3c663d1b-f9f9-47d6-a9ed-e3ab2a9b2895"),
                             Quantity = 30
                         },
                         new
                         {
-                            Id = new Guid("4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d"),
+                            Id = new Guid("4b57e514-373a-4eca-8a62-fc0c2859e3ea"),
                             ProcessEquipmentTypeId = new Guid("f9215bfc-58cc-494e-a0db-8c42c7c88f64"),
                             ProductionFacilityId = new Guid("2342040a-9c7a-4537-9bfc-6b1895cd711f"),
                             Quantity = 40
                         },
                         new
                         {
-                            Id = new Guid("5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"),
+                            Id = new Guid("990b2440-4ba8-47e4-9876-7863a1ec53a2"),
                             ProcessEquipmentTypeId = new Guid("7a4de707-61a4-4d7f-94e5-4e1dd6f442d4"),
                             ProductionFacilityId = new Guid("e3c1a636-05cf-4b7f-8f16-7d4bd7416e67"),
                             Quantity = 50

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SmartTestTaskKozitski.DAL.Data;
 
@@ -11,9 +12,11 @@ using SmartTestTaskKozitski.DAL.Data;
 namespace SmartTestTaskKozitski.DAL.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20250121195512_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,37 +51,37 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"),
-                            ProcessEquipmentTypeId = new Guid("d1e59328-7e39-4fe7-9b54-768cebbeb324"),
-                            ProductionFacilityId = new Guid("b0fc118d-527d-41b1-9b1c-3a74bdc8dd2a"),
+                            Id = new Guid("698be234-5be8-4e2e-b4b0-8915725464f7"),
+                            ProcessEquipmentTypeId = new Guid("befd5d2d-b939-459a-9634-2585900c4075"),
+                            ProductionFacilityId = new Guid("b6bdda1a-e99c-4f53-8505-cde90e9f7b61"),
                             Quantity = 10
                         },
                         new
                         {
-                            Id = new Guid("2a3b4c5d-6e7f-8a9b-0c1d-2e3f4a5b6c7d"),
-                            ProcessEquipmentTypeId = new Guid("4cd6e57c-d7ae-42ef-9d6e-74a49dbd4223"),
-                            ProductionFacilityId = new Guid("241a2aa6-0bf4-442a-9058-9db7c2355f96"),
+                            Id = new Guid("0facaf87-f3f6-4d1d-82e2-3ae098ef3732"),
+                            ProcessEquipmentTypeId = new Guid("3108ebb3-5899-4e67-a2b2-3c0177d0398f"),
+                            ProductionFacilityId = new Guid("89af33b9-6059-4fad-b3fa-5a75f03da498"),
                             Quantity = 20
                         },
                         new
                         {
-                            Id = new Guid("3a4b5c6d-7e8f-9a0b-1c2d-3e4f5a6b7c8d"),
-                            ProcessEquipmentTypeId = new Guid("7e02cfa1-5ec5-4507-8c68-d471cbf6e9c5"),
-                            ProductionFacilityId = new Guid("3c663d1b-f9f9-47d6-a9ed-e3ab2a9b2895"),
+                            Id = new Guid("eaa38ecd-06b9-40b3-8323-fcb5edc748dd"),
+                            ProcessEquipmentTypeId = new Guid("8f0bcd32-8183-489c-8a17-295b7d713945"),
+                            ProductionFacilityId = new Guid("07d53b3a-e098-45bb-bfcb-fa34c2473395"),
                             Quantity = 30
                         },
                         new
                         {
-                            Id = new Guid("4a5b6c7d-8e9f-0a1b-2c3d-4e5f6a7b8c9d"),
-                            ProcessEquipmentTypeId = new Guid("f9215bfc-58cc-494e-a0db-8c42c7c88f64"),
-                            ProductionFacilityId = new Guid("2342040a-9c7a-4537-9bfc-6b1895cd711f"),
+                            Id = new Guid("e8b16822-ca86-4deb-9043-2ac1d6c15a9e"),
+                            ProcessEquipmentTypeId = new Guid("9e959bfc-4128-4218-92c9-6d05daecd4c9"),
+                            ProductionFacilityId = new Guid("684ec398-9db8-4554-a8e0-8232d62ff668"),
                             Quantity = 40
                         },
                         new
                         {
-                            Id = new Guid("5a6b7c8d-9e0f-1a2b-3c4d-5e6f7a8b9c0d"),
-                            ProcessEquipmentTypeId = new Guid("7a4de707-61a4-4d7f-94e5-4e1dd6f442d4"),
-                            ProductionFacilityId = new Guid("e3c1a636-05cf-4b7f-8f16-7d4bd7416e67"),
+                            Id = new Guid("2a2b89c3-701f-4f0e-8343-5d83d7111eee"),
+                            ProcessEquipmentTypeId = new Guid("f767a81f-65ee-445c-88c2-11cb42946c3f"),
+                            ProductionFacilityId = new Guid("c70d64e0-8b05-437e-b927-53a2b5a30047"),
                             Quantity = 50
                         });
                 });
@@ -96,23 +99,23 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d1e59328-7e39-4fe7-9b54-768cebbeb324")
+                            Id = new Guid("befd5d2d-b939-459a-9634-2585900c4075")
                         },
                         new
                         {
-                            Id = new Guid("4cd6e57c-d7ae-42ef-9d6e-74a49dbd4223")
+                            Id = new Guid("3108ebb3-5899-4e67-a2b2-3c0177d0398f")
                         },
                         new
                         {
-                            Id = new Guid("7e02cfa1-5ec5-4507-8c68-d471cbf6e9c5")
+                            Id = new Guid("8f0bcd32-8183-489c-8a17-295b7d713945")
                         },
                         new
                         {
-                            Id = new Guid("f9215bfc-58cc-494e-a0db-8c42c7c88f64")
+                            Id = new Guid("9e959bfc-4128-4218-92c9-6d05daecd4c9")
                         },
                         new
                         {
-                            Id = new Guid("7a4de707-61a4-4d7f-94e5-4e1dd6f442d4")
+                            Id = new Guid("f767a81f-65ee-445c-88c2-11cb42946c3f")
                         });
                 });
 
@@ -129,23 +132,23 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b0fc118d-527d-41b1-9b1c-3a74bdc8dd2a")
+                            Id = new Guid("b6bdda1a-e99c-4f53-8505-cde90e9f7b61")
                         },
                         new
                         {
-                            Id = new Guid("241a2aa6-0bf4-442a-9058-9db7c2355f96")
+                            Id = new Guid("89af33b9-6059-4fad-b3fa-5a75f03da498")
                         },
                         new
                         {
-                            Id = new Guid("3c663d1b-f9f9-47d6-a9ed-e3ab2a9b2895")
+                            Id = new Guid("07d53b3a-e098-45bb-bfcb-fa34c2473395")
                         },
                         new
                         {
-                            Id = new Guid("2342040a-9c7a-4537-9bfc-6b1895cd711f")
+                            Id = new Guid("684ec398-9db8-4554-a8e0-8232d62ff668")
                         },
                         new
                         {
-                            Id = new Guid("e3c1a636-05cf-4b7f-8f16-7d4bd7416e67")
+                            Id = new Guid("c70d64e0-8b05-437e-b927-53a2b5a30047")
                         });
                 });
 
@@ -201,35 +204,35 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                             b1.HasData(
                                 new
                                 {
-                                    ProcessEquipmentTypeId = new Guid("d1e59328-7e39-4fe7-9b54-768cebbeb324"),
+                                    ProcessEquipmentTypeId = new Guid("befd5d2d-b939-459a-9634-2585900c4075"),
                                     Area = 50,
                                     Code = 1001L,
                                     Name = "TypeA"
                                 },
                                 new
                                 {
-                                    ProcessEquipmentTypeId = new Guid("4cd6e57c-d7ae-42ef-9d6e-74a49dbd4223"),
+                                    ProcessEquipmentTypeId = new Guid("3108ebb3-5899-4e67-a2b2-3c0177d0398f"),
                                     Area = 75,
                                     Code = 1002L,
                                     Name = "TypeB"
                                 },
                                 new
                                 {
-                                    ProcessEquipmentTypeId = new Guid("7e02cfa1-5ec5-4507-8c68-d471cbf6e9c5"),
+                                    ProcessEquipmentTypeId = new Guid("8f0bcd32-8183-489c-8a17-295b7d713945"),
                                     Area = 100,
                                     Code = 1003L,
                                     Name = "TypeC"
                                 },
                                 new
                                 {
-                                    ProcessEquipmentTypeId = new Guid("f9215bfc-58cc-494e-a0db-8c42c7c88f64"),
+                                    ProcessEquipmentTypeId = new Guid("9e959bfc-4128-4218-92c9-6d05daecd4c9"),
                                     Area = 125,
                                     Code = 1004L,
                                     Name = "TypeD"
                                 },
                                 new
                                 {
-                                    ProcessEquipmentTypeId = new Guid("7a4de707-61a4-4d7f-94e5-4e1dd6f442d4"),
+                                    ProcessEquipmentTypeId = new Guid("f767a81f-65ee-445c-88c2-11cb42946c3f"),
                                     Area = 150,
                                     Code = 1005L,
                                     Name = "TypeE"
@@ -273,35 +276,35 @@ namespace SmartTestTaskKozitski.DAL.Migrations
                             b1.HasData(
                                 new
                                 {
-                                    ProductionFacilityId = new Guid("b0fc118d-527d-41b1-9b1c-3a74bdc8dd2a"),
+                                    ProductionFacilityId = new Guid("b6bdda1a-e99c-4f53-8505-cde90e9f7b61"),
                                     Area = 200,
                                     Code = 2001L,
                                     Name = "FacilityA"
                                 },
                                 new
                                 {
-                                    ProductionFacilityId = new Guid("241a2aa6-0bf4-442a-9058-9db7c2355f96"),
+                                    ProductionFacilityId = new Guid("89af33b9-6059-4fad-b3fa-5a75f03da498"),
                                     Area = 300,
                                     Code = 2002L,
                                     Name = "FacilityB"
                                 },
                                 new
                                 {
-                                    ProductionFacilityId = new Guid("3c663d1b-f9f9-47d6-a9ed-e3ab2a9b2895"),
+                                    ProductionFacilityId = new Guid("07d53b3a-e098-45bb-bfcb-fa34c2473395"),
                                     Area = 400,
                                     Code = 2003L,
                                     Name = "FacilityC"
                                 },
                                 new
                                 {
-                                    ProductionFacilityId = new Guid("2342040a-9c7a-4537-9bfc-6b1895cd711f"),
+                                    ProductionFacilityId = new Guid("684ec398-9db8-4554-a8e0-8232d62ff668"),
                                     Area = 500,
                                     Code = 2004L,
                                     Name = "FacilityD"
                                 },
                                 new
                                 {
-                                    ProductionFacilityId = new Guid("e3c1a636-05cf-4b7f-8f16-7d4bd7416e67"),
+                                    ProductionFacilityId = new Guid("c70d64e0-8b05-437e-b927-53a2b5a30047"),
                                     Area = 600,
                                     Code = 2005L,
                                     Name = "FacilityE"
