@@ -9,6 +9,8 @@ namespace SmartTestTaskKozitski.WebApi.Controllers
 {
     [Route("api/contracts")]
     [ApiController]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public class ContractsController : ControllerBase
     {
         private readonly IContractService contractService;
@@ -28,7 +30,6 @@ namespace SmartTestTaskKozitski.WebApi.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateAsync([FromBody] AddContractDto addContractDto)
         {
             try

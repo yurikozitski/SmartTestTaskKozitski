@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SmartTestTaskKozitski.BLL.Extensions;
 using SmartTestTaskKozitski.BLL.Mapping;
 using SmartTestTaskKozitski.DAL.Data;
+using SmartTestTaskKozitski.WebApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddSingleton(mapper);
 
 builder.Services.AddRepositories();
 builder.Services.AddServices();
+builder.Services.AddSecurity();
 
 builder.Services.AddControllers();
 
@@ -34,5 +36,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ApiKeyMiddleware>();
+app.UseMiddleware<ErrorHandlingMiddleware>();
+
 app.MapControllers();
 app.Run();
