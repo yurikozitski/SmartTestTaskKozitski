@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using SmartTestTaskKozitski.DAL.Entities;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SmartTestTaskKozitski.DAL.Entities;
 
 namespace SmartTestTaskKozitski.DAL.Interfaces
 {

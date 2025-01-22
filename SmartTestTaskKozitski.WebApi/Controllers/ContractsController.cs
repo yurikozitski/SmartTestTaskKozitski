@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SmartTestTaskKozitski.BLL.DTOs;
 using SmartTestTaskKozitski.BLL.Exceptions;
 using SmartTestTaskKozitski.BLL.Interfaces;
-using SmartTestTaskKozitski.DAL.Entities;
 
 namespace SmartTestTaskKozitski.WebApi.Controllers
 {

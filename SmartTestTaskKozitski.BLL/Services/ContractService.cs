@@ -4,11 +4,6 @@ using SmartTestTaskKozitski.BLL.Exceptions;
 using SmartTestTaskKozitski.BLL.Interfaces;
 using SmartTestTaskKozitski.DAL.Entities;
 using SmartTestTaskKozitski.DAL.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.BLL.Services
 {

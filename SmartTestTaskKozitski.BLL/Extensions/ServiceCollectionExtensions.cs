@@ -4,11 +4,6 @@ using SmartTestTaskKozitski.BLL.Security;
 using SmartTestTaskKozitski.BLL.Services;
 using SmartTestTaskKozitski.DAL.Interfaces;
 using SmartTestTaskKozitski.DAL.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SmartTestTaskKozitski.BLL.Extensions
 {

@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using SmartTestTaskKozitski.BLL.Security;
+﻿using SmartTestTaskKozitski.BLL.Security;
 using System.Net;
 
 namespace SmartTestTaskKozitski.WebApi.Middleware

@@ -1,12 +1,6 @@
 ﻿using AutoMapper;
 using SmartTestTaskKozitski.BLL.DTOs;
-using System;
-using System.Collections.Generic;
 using SmartTestTaskKozitski.DAL.Entities;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SmartTestTaskKozitski.BLL.Mapping
 {
