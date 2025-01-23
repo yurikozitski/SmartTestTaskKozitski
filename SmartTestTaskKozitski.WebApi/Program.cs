@@ -4,6 +4,7 @@ using SmartTestTaskKozitski.BLL.Extensions;
 using SmartTestTaskKozitski.BLL.Mapping;
 using SmartTestTaskKozitski.DAL.Data;
 using SmartTestTaskKozitski.WebApi.Middleware;
+using SmartTestTaskKozitski.WebApi.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,17 +26,12 @@ builder.Services.AddSecurity();
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c => c.OperationFilter<CustomHeaderParameter>());
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseMiddleware<ApiKeyMiddleware>();
 app.UseMiddleware<ErrorHandlingMiddleware>();

@@ -157,7 +157,7 @@ namespace SmartTestTaskKozitski.Tests
 
         [Theory]
         [MemberData(nameof(AddContractDtoSInValid))]
-        public async Task CreateAsync_InValidData_Produces400CodeResult(AddContractDto addContractDto)
+        public async Task CreateAsync_InvalidData_Produces400CodeResult(AddContractDto addContractDto)
         {
             //Arrange
             using var context = new ApplicationContext(UnitTestHelper.GetUnitTestDbOptions());
