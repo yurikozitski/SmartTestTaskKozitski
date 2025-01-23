@@ -14,4 +14,5 @@ docker exec -it smartapi dotnet /migration/SmartTestTaskKozitski.MigrationTool.d
 
 Then navigate to http://localhost:8080
 Use api key : abc12def
+
 SwaggerUI is used by default
