@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTestTaskKozitski.BLL",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTestTaskKozitski.Tests", "SmartTestTaskKozitski.Tests\SmartTestTaskKozitski.Tests.csproj", "{557C8A2C-BDE9-4610-90A9-E20D765CA06E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartTestTaskKozitski.MigrationTool", "SmartTestTaskKozitski.MigrationTool\SmartTestTaskKozitski.MigrationTool.csproj", "{EABC3F78-1BA3-4423-BC56-7E88D0FACCB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{557C8A2C-BDE9-4610-90A9-E20D765CA06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{557C8A2C-BDE9-4610-90A9-E20D765CA06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{557C8A2C-BDE9-4610-90A9-E20D765CA06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABC3F78-1BA3-4423-BC56-7E88D0FACCB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABC3F78-1BA3-4423-BC56-7E88D0FACCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABC3F78-1BA3-4423-BC56-7E88D0FACCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABC3F78-1BA3-4423-BC56-7E88D0FACCB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

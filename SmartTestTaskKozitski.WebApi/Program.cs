@@ -31,7 +31,11 @@ builder.Services.AddSwaggerGen(c => c.OperationFilter<CustomHeaderParameter>());
 var app = builder.Build();
 
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "swagger");
+    c.RoutePrefix = string.Empty;
+});
 
 app.UseMiddleware<ApiKeyMiddleware>();
 app.UseMiddleware<ErrorHandlingMiddleware>();
