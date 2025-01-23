@@ -15,4 +15,5 @@ Use api key : abc12def
 SwaggerUI is used by default
 
 Available facility codes: 2001, 2002, 2003, 2004, 2005
+
 Available equipment codes: 1001, 1002, 1003, 1004, 1005
