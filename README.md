@@ -2,9 +2,6 @@
 1) Download this repository and navigate to the solution folder
 2) Run following commands:
 ```docker
-docker compose build
-```
-```docker
 docker compose up -d
 ```
 And apply database migrations:
