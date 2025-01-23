@@ -9,7 +9,7 @@ using SmartTestTaskKozitski.WebApi.Swagger;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<ApplicationContext>(options =>
-                    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+                    options.UseSqlServer(builder.Configuration.GetConnectionString("DeployDb")));
 
 var mapperConfig = new MapperConfiguration(mc =>
 {
